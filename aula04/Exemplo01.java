@@ -13,7 +13,8 @@ public class Exemplo01 {
         System.out.println("Nome no topo: " + pilha.peek()); // elemento que está no TOPO da pilha
 
         while(!pilha.isEmpty()) {
-            System.out.print( pilha.pop() + " ");
+            String resp = pilha.pop();
+            System.out.print( resp + " ");
         }
 
     }
