@@ -2,9 +2,9 @@ public class No {
     private Pessoa pessoa;
     private No proximo;
     
-    public No(Pessoa pessoa, No proximo) {
+    public No(Pessoa pessoa) {
         this.pessoa = pessoa;
-        this.proximo = proximo;
+        this.proximo = null;
     }
 
     public Pessoa getPessoa() {
