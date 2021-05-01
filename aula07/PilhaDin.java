@@ -39,6 +39,38 @@ public class PilhaDin {
         return -1;
     }
 
-    
+    @Override
+    public String toString() {
+        String valores = "[ ";
+        No aux = topo;
+
+        if(aux != null) {
+            valores += aux.getValor();
+            aux = aux.getProximo();
+        }
+        while(aux != null) { // enquanto não chegar no final da Pilha
+            valores += ", " + aux.getValor();
+            aux = aux.getProximo(); // vai para o próximo No
+        }
+
+        valores += " ]";
+        return valores;
+    }
+
+    public String exibir() {
+        String valores = "[ ";
+        No aux = topo;
+
+        while(aux != null) { // enquanto não chegar no final da Pilha
+            valores += aux.getValor();
+            aux = aux.getProximo(); // vai para o próximo No
+            if(aux != null) { // se tiver outro No
+                valores += ", ";
+            }
+        }
+
+        valores += " ]";
+        return valores;
+    }
     
 }

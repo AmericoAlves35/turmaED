@@ -6,14 +6,17 @@ public class App {
 
         p.empilhar(10);
         p.empilhar(20);
+        p.empilhar(30);
 
         System.out.println("Vazia? " + p.estaVazia());
         System.out.println("# elementos: " + p.getTamanho());
         System.out.println("Valor no topo: " + p.valorNoTopo());
+        System.out.println("Pilha: " + p);
 
         System.out.println("\nRemovou o valor " + p.desempillhar());
         System.out.println("# elementos: " + p.getTamanho());
         System.out.println("Valor no topo: " + p.valorNoTopo());
+        System.out.println("Pilha: " + p);
 
     }
 }
