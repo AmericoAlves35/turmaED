@@ -1,3 +1,4 @@
+package model;
 
 public class Client {
     private String name;
@@ -36,5 +37,10 @@ public class Client {
     public boolean isElderly() {
         return age >= 60;
     }
-    
+
+    @Override
+    public String toString() {
+        return name  + ":" + age;
+    }
+
 }

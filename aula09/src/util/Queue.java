@@ -1,8 +1,14 @@
+package util;
+
+import model.Client;
+
 public class Queue {
     private No inicio, fim;
+    private int size;
 
     public Queue() {
         inicio = fim = null;
+        size = 0;
     }
 
     public boolean isEmpty() {
@@ -19,40 +25,48 @@ public class Queue {
             fim.setProx(novo);
             // movo o "fim" para o novo No
             fim = novo;
-
         }
+        size++;
     }
 
     public String show() {
-        String saida = "Fila: ";
+        String saida = "";
         No aux = inicio;
 
+        if(isEmpty()) {
+            return "vazia";
+        }
+        
         while( aux != null) {
-            saida += aux.getClient().getName() + ", ";
+            saida += aux.getClient() + "-";
             aux = aux.getProx();
         }
         return saida;
     }
 
-    public String peek() { 
+    public Client peek() { 
         if(isEmpty()) {
-            return "";
+            return null;
         }
-        return inicio.getClient().getName();
+        return inicio.getClient();
     }
 
-    public String dequeue() {
+    public Client dequeue() {
         if(isEmpty()) {
-            return "";
+            return null;
         }
         No aux = inicio;
-        // aponta o "inicio" para o próximo No
+        
         inicio = inicio.getProx();
 
-        if(inicio == null) { // se a fila ficou vazia
+        if(inicio == null) { 
             fim = null;
         }
+        size--;
+        return aux.getClient();
+    }
 
-        return aux.getClient().getName();
+    public int getSize() {
+        return size;
     }
 }

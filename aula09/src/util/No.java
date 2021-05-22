@@ -1,3 +1,7 @@
+package util;
+
+import model.Client;
+
 public class No {
     private Client client;
     private No prox;
