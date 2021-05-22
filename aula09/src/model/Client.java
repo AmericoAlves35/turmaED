@@ -12,9 +12,14 @@ public class Client {
 
 
     private void setName(String name) {
-        String novoNome = name.trim().replace("\\s{2,}", " ");
+        String etapa1 = name.replace("\\s{2,}", " ");
+        System.out.println(etapa1);
+        String novoNome = etapa1.trim();
+
         if(novoNome.length() >= 5) {
             this.name = novoNome;
+        } else {
+            this.name = "No name";
         }
     }
 
