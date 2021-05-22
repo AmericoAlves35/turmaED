@@ -30,7 +30,7 @@ public class ManageAttendance {
         return priority.getSize();
     }
 
-    private boolean isFull() {
+    public boolean isFull() {
         return normal.getSize() + priority.getSize() == maxSize;
     }
 
@@ -39,9 +39,9 @@ public class ManageAttendance {
             return false;
         }
         if (cli.isElderly()) {
-            priority.enqueue(cli.getName(), cli.getAge());
+            priority.enqueue(cli);
         } else {
-            normal.enqueue(cli.getName(), cli.getAge());
+            normal.enqueue(cli);
         }
         return true;
     }

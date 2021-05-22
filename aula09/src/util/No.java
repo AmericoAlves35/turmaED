@@ -6,8 +6,8 @@ public class No {
     private Client client;
     private No prox;
 
-    public No(String name, int age) {
-        client = new Client(name, age);
+    public No(Client client) {
+        this.client = client;
         prox = null;
     }
 

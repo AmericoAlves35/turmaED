@@ -15,8 +15,8 @@ public class Queue {
         return inicio == null;
     }
 
-    public void enqueue(String name, int age) {
-        No novo = new No(name, age);
+    public void enqueue(Client client) {
+        No novo = new No(client);
 
         if(isEmpty()) {
             inicio = fim = novo;
