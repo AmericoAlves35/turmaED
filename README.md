@@ -1,2 +1,2 @@
 # turmaED
-exercícios aulas Estrutura de Dados
+Exercícios aulas Estrutura de Dados
